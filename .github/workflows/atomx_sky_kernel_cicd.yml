@@ -1,0 +1,50 @@
+name: 🏗️ BUILD ATOMX_SKY_KERNEL_CICD_GKI_STABLE
+on:
+  push:
+    branches: 
+      - main
+    tags:
+    - '*'
+  workflow_dispatch:
+
+jobs:
+
+  build_atomx_sky_stock:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "👨‍🔧 Setup build environment"
+        run: curl https://raw.githubusercontent.com/akhilnarang/scripts/master/setup/android_build_env.sh | bash -
+      - name: "⏳ Clone Repo, Sync & Build."
+        run: repo init -u https://gitlab.com/xprateek/kernel_manifest -b android12-5.10-sky --depth=1 && repo sync && ./build.sh -t -c && mv AtomX-gki-sky-*.zip atomx_sky_kernel_cicd_gki-stock.zip
+      - name: "📄 Generating Release Tag"
+        id: tag
+        run: echo "release_tag=xprateek/ATOMX_SKY_KERNEL_CICD_GKI_WIP_STOCK-$(date +"%Y.%m.%d")" >> $GITHUB_OUTPUT
+      - name: "🗃️ Create Release"
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ steps.tag.outputs.release_tag }}
+          files: /home/runner/work/ATOMX_SKY_KERNEL_CICD_GKI/ATOMX_SKY_KERNEL_CICD_GKI/atomx_sky_kernel_cicd_gki-stock.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          repository: xprateek/ATOMX_SKY_KERNEL_CICD_GKI
+          TOKEN: ${{ secrets.TOKEN }}
+
+  build_atomx_sky_ksu:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "👨‍🔧 Setup build environment"
+        run: curl https://raw.githubusercontent.com/akhilnarang/scripts/master/setup/android_build_env.sh | bash -
+      - name: "⏳ Clone Repo, Sync & Build."
+        run: repo init -u https://gitlab.com/xprateek/kernel_manifest -b android12-5.10-sky --depth=1 && repo sync && cd common && curl -LSs "https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh" | bash - && cd ../ && ./build.sh -t -c && mv AtomX-gki-sky-*.zip atomx_sky_kernel_cicd_gki-ksu.zip
+      - name: "📄 Generating Release Tag"
+        id: tag
+        run: echo "release_tag=xprateek/ATOMX_SKY_KERNEL_CICD_GKI_WIP_KSU-$(date +"%Y.%m.%d")" >> $GITHUB_OUTPUT
+      - name: "🗃️ Create Release"
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ steps.tag.outputs.release_tag }}
+          files: /home/runner/work/ATOMX_SKY_KERNEL_CICD_GKI/ATOMX_SKY_KERNEL_CICD_GKI/atomx_sky_kernel_cicd_gki-ksu.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          repository: xprateek/ATOMX_SKY_KERNEL_CICD_GKI
+          TOKEN: ${{ secrets.TOKEN }}
