@@ -1,7 +1,7 @@
 # ATOMX\_SKY\_KERNEL\_CICD\_GKI
 ### 📱 Xiaomi Redmi 12 5G | Poco M6 Pro 5G | Redmi Note 12R(China) 
 ######  (Codename : SKY) (SM4450-development)
-![ATOMX](https://github.com/xprateek/ATOMX_SKY_KERNEL_CICD_GKI/assets/47496067/26693af4-6c8e-4e0a-b510-cd5a5c554c53)
+![ATOMX](https://raw.githubusercontent.com/xprateek/ATOMX_SKY_KERNEL_CICD_GKI/main/ATOMX.png)
 
 ### 📦 Release TAG's filename (Stock & KernelSu)
 |     |     |
