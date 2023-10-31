@@ -38,13 +38,13 @@ KSU_EXPECTED_HASH=
 BUILD_KERNELSU_BOOT_IMG=false
 KERNELSU_SOURCE_BOOT_IMAGE=
 
-DISABLE-LTO=true
-DISABLE_CC_WERROR=true
+DISABLE-LTO=false
+DISABLE_CC_WERROR=false
 ADD_KPROBES_CONFIG=true
 ADD_OVERLAYFS_CONFIG=true
 ENABLE_CCACHE=true
 NEED_DTBO=false
-BUILDER_HOST=xprateek_gh_action
+BUILDER_HOST=xprateek_gh_actions
 
-TC_CUSTOM_CMDS:CLANG_TRIPLE=aarch64-linux-gnu- CROSS_COMPILE=aarch64-linux-androidkernel-
+TC_CUSTOM_CMDS:CROSS_COMPILE=aarch64-linux-gnu-
 EXTRA_CMDS:AR=llvm-ar OBJDUMP=llvm-objdump STRIP=llvm-strip NM=llvm-nm OBJCOPY=llvm-objcopy LD=ld.lld
