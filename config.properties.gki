@@ -1,5 +1,5 @@
-KERNEL_SOURCE=https://git.codelinaro.org/clo/la/kernel/hikey-linaro.git
-KERNEL_SOURCE_BRANCH=aosp-new/mirror-android12-5.10-lts
+KERNEL_SOURCE=https://git.codelinaro.org/clo/la/kernel/common.git
+KERNEL_SOURCE_BRANCH=aosp-new/android12-5.10-lts
 KERNEL_CONFIG=gki_defconfig
 KERNEL_IMAGE_NAME=Image
 ARCH=arm64

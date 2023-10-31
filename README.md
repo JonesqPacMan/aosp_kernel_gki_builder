@@ -14,9 +14,9 @@
 | **Android12-5.10-LTS** | **Android13-5.10-LTS** |
 | [![🏗️ BUILD CLO_GKI_ANDROID12-5.10-LTS](https://github.com/xprateek/ATOMX_SKY_KERNEL_CICD_GKI/actions/workflows/atomx_sky_kernel_cicd_gki12.yml/badge.svg)](https://github.com/xprateek/ATOMX_SKY_KERNEL_CICD_GKI/actions/workflows/atomx_sky_kernel_cicd_gki12.yml) | [![🏗️ BUILD CLO_GKI_ANDROID13-5.10-LTS](https://github.com/xprateek/ATOMX_SKY_KERNEL_CICD_GKI/actions/workflows/atomx_sky_kernel_cicd_gki13.yml/badge.svg)](https://github.com/xprateek/ATOMX_SKY_KERNEL_CICD_GKI/actions/workflows/atomx_sky_kernel_cicd_gki13.yml) |
 ```
-https://git.codelinaro.org/clo/la/kernel/hikey-linaro.git
-Branch : aosp-new/mirror-android12-5.10-lts
-Branch : aosp-new/mirror-android13-5.10-lts
+https://git.codelinaro.org/clo/la/kernel/common/-/tree/aosp-common/aosp/clo/main
+Branch : aosp-new/android12-5.10-lts
+Branch : aosp-new/android13-5.10-lts
 ```
 ```
 atomx_sky_kernel_cicd_gki-stock.zip
