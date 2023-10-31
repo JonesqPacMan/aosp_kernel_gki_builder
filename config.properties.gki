@@ -46,5 +46,5 @@ ENABLE_CCACHE=true
 NEED_DTBO=false
 BUILDER_HOST=GH-Actions-xPrateek
 
-TC_CUSTOM_CMDS:CLANG_TRIPLE=aarch64-linux-gnu- CROSS_COMPILE=aarch64-linux-androidkernel-
+TC_CUSTOM_CMDS:CLANG_TRIPLE=aarch64-linux-gnu- CROSS_COMPILE=aarch64-linux-androidkernel- -fPIC
 EXTRA_CMDS:
