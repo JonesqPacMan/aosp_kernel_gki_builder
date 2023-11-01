@@ -1,6 +1,6 @@
 KERNEL_SOURCE=https://git.codelinaro.org/clo/la/kernel/common.git
 KERNEL_SOURCE_BRANCH=aosp-new/android12-5.10-lts
-KERNEL_CONFIG=gki_defconfig
+KERNEL_CONFIG=defconfig
 KERNEL_IMAGE_NAME=Image
 ARCH=arm64
 
@@ -30,7 +30,7 @@ CUSTOM_GCC_32_SOURCE=https://github.com/mvaisakh/gcc-arm.git
 CUSTOM_GCC_32_BRANCH=gcc-master
 CUSTOM_GCC_32_BIN=arm-linux-androideabi-
 
-ENABLE_KERNELSU=true
+ENABLE_KERNELSU=false
 KERNELSU_INSTALLER=https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh
 KERNELSU_TAG=main
 KSU_EXPECTED_SIZE=
@@ -38,8 +38,8 @@ KSU_EXPECTED_HASH=
 BUILD_KERNELSU_BOOT_IMG=false
 KERNELSU_SOURCE_BOOT_IMAGE=
 
-DISABLE-LTO=true
-DISABLE_CC_WERROR=true
+DISABLE-LTO=false
+DISABLE_CC_WERROR=false
 ADD_KPROBES_CONFIG=true
 ADD_OVERLAYFS_CONFIG=true
 ENABLE_CCACHE=true
@@ -48,4 +48,3 @@ BUILDER_HOST=xprateek_gh_actions
 
 TC_CUSTOM_CMDS:CROSS_COMPILE=aarch64-linux-gnu-
 EXTRA_CMDS:
-CROSS_COMPILE_FLAGS="-fPIC"
