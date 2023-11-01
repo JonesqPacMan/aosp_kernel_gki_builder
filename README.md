@@ -7,12 +7,12 @@
 |     |     |
 | --- | --- |
 | **Stable\_CICD** | **WIP\_CICD** |
-| [![🏗️ BUILD ATOMX_SKY_KERNEL_CICD_GKI](https://github.com/xprateek/ATOMX_SKY_KERNEL_CICD_GKI/actions/workflows/atomx_sky_kernel_cicd.yml/badge.svg)](https://github.com/xprateek/ATOMX_SKY_KERNEL_CICD_GKI/actions/workflows/atomx_sky_kernel_cicd.yml) | [![🏗️ BUILD ATOMX_SKY_KERNEL_CICD_GKI_WIP](https://github.com/xprateek/ATOMX_SKY_KERNEL_CICD_GKI/actions/workflows/atomx_sky_kernel_cicd_wip.yml/badge.svg)](https://github.com/xprateek/ATOMX_SKY_KERNEL_CICD_GKI/actions/workflows/atomx_sky_kernel_cicd_wip.yml) |
+| [![🏗️ BUILD ATOMX_CICD_GKI_STABLE](https://github.com/xprateek/ATOMX_SKY_KERNEL_CICD_GKI/actions/workflows/atomx_sky_kernel_cicd_stable.yml/badge.svg)](https://github.com/xprateek/ATOMX_SKY_KERNEL_CICD_GKI/actions/workflows/atomx_sky_kernel_cicd_stable.yml) | [![🏗️ BUILD ATOMX_SKY_KERNEL_CICD_GKI_STABLE](https://github.com/xprateek/ATOMX_SKY_KERNEL_CICD_GKI/actions/workflows/atomx_sky_kernel_cicd.yml/badge.svg)](https://github.com/xprateek/ATOMX_SKY_KERNEL_CICD_GKI/actions/workflows/atomx_sky_kernel_cicd.yml) |
 
 |     |     |
 | --- | --- |
 | **Android12-5.10-LTS** | **Android13-5.10-LTS** |
-| [![🏗️ BUILD CLO_GKI_ANDROID12-5.10-LTS](https://github.com/xprateek/ATOMX_SKY_KERNEL_CICD_GKI/actions/workflows/atomx_sky_kernel_cicd_gki12.yml/badge.svg)](https://github.com/xprateek/ATOMX_SKY_KERNEL_CICD_GKI/actions/workflows/atomx_sky_kernel_cicd_gki12.yml) | [![🏗️ BUILD CLO_GKI_ANDROID13-5.10-LTS](https://github.com/xprateek/ATOMX_SKY_KERNEL_CICD_GKI/actions/workflows/atomx_sky_kernel_cicd_gki13.yml/badge.svg)](https://github.com/xprateek/ATOMX_SKY_KERNEL_CICD_GKI/actions/workflows/atomx_sky_kernel_cicd_gki13.yml) |
+| [![🏗️ BUILD CLO_GKI_ANDROID12-5.10-LTS](https://github.com/xprateek/ATOMX_SKY_KERNEL_CICD_GKI/actions/workflows/atomx_sky_kernel_cicd_gki_12510.yml/badge.svg)](https://github.com/xprateek/ATOMX_SKY_KERNEL_CICD_GKI/actions/workflows/atomx_sky_kernel_cicd_gki_12510.yml) | [![🏗️ BUILD CLO_GKI_ANDROID13-5.10-LTS](https://github.com/xprateek/ATOMX_SKY_KERNEL_CICD_GKI/actions/workflows/atomx_sky_kernel_cicd_gki_13510.yml/badge.svg)](https://github.com/xprateek/ATOMX_SKY_KERNEL_CICD_GKI/actions/workflows/atomx_sky_kernel_cicd_gki_13510.yml) |
 ```
 https://git.codelinaro.org/clo/la/kernel/common/-/tree/aosp-common/aosp/clo/main
 Branch : aosp-new/android12-5.10-lts
