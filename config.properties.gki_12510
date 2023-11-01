@@ -10,8 +10,8 @@ AOSP_CLANG_SYSTEM=linux-x86
 AOSP_CLANG_BRANCH=main
 AOSP_CLANG_VERSION=stable
 USE_CUSTOM_CLANG=true
-CUSTOM_CLANG_SOURCE=https://gitlab.com/dark.phnx12/clang-neutron.git
-CUSTOM_CLANG_BRANCH=17
+CUSTOM_CLANG_SOURCE=https://github.com/ZyCromerZ/Clang/releases/download/17.0.0-20230725-release/Clang-17.0.0-20230725.tar.gz
+CUSTOM_CLANG_BRANCH=
 
 ENABLE_GCC=true
 ENABLE_AOSP_GCC_ARM64=true
@@ -30,16 +30,16 @@ CUSTOM_GCC_32_SOURCE=https://github.com/mvaisakh/gcc-arm.git
 CUSTOM_GCC_32_BRANCH=gcc-master
 CUSTOM_GCC_32_BIN=arm-linux-androideabi-
 
-ENABLE_KERNELSU=false
+ENABLE_KERNELSU=true
 KERNELSU_INSTALLER=https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh
-KERNELSU_TAG=main
+KERNELSU_TAG=
 KSU_EXPECTED_SIZE=
 KSU_EXPECTED_HASH=
 BUILD_KERNELSU_BOOT_IMG=false
 KERNELSU_SOURCE_BOOT_IMAGE=
 
-DISABLE-LTO=false
-DISABLE_CC_WERROR=false
+DISABLE-LTO=true
+DISABLE_CC_WERROR=true
 ADD_KPROBES_CONFIG=true
 ADD_OVERLAYFS_CONFIG=true
 ENABLE_CCACHE=true
@@ -47,4 +47,4 @@ NEED_DTBO=false
 BUILDER_HOST=xprateek_gh_actions
 
 TC_CUSTOM_CMDS:CLANG_TRIPLE=aarch64-linux-gnu- CROSS_COMPILE=aarch64-linux-gnu-
-EXTRA_CMDS:
+EXTRA_CMDS:AR=llvm-ar OBJDUMP=llvm-objdump STRIP=llvm-strip NM=llvm-nm OBJCOPY=llvm-objcopy
