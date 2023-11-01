@@ -15,7 +15,7 @@ jobs:
       - name: "👨‍🔧 Setup build environment"
         run: curl https://raw.githubusercontent.com/akhilnarang/scripts/master/setup/android_build_env.sh | bash -
       - name: "⏳ Clone Repo, Sync & Build."
-        run: repo init -u https://gitlab.com/xprateek/kernel_manifest -b android12-5.10-sky --depth=1 && repo sync && ./build.sh -t -c && mv AtomX-gki-sky-*.zip atomx_sky_kernel_cicd_gki-stock.zip
+        run: repo init -u https://gitlab.com/xprateek/kernel_manifest_clo -b main --depth=1 && repo sync && ./build.sh -t -c && mv AtomX-gki-sky-*.zip atomx_sky_kernel_cicd_gki-stock.zip
       - name: "📄 Generating Release Tag"
         id: tag
         run: echo "release_tag=xprateek/ATOMX_SKY_KERNEL_CICD_GKI_WIP_STOCK-$(date +"%Y.%m.%d")" >> $GITHUB_OUTPUT
@@ -35,7 +35,7 @@ jobs:
       - name: "👨‍🔧 Setup build environment"
         run: curl https://raw.githubusercontent.com/akhilnarang/scripts/master/setup/android_build_env.sh | bash -
       - name: "⏳ Clone Repo, Sync & Build."
-        run: repo init -u https://gitlab.com/xprateek/kernel_manifest -b android12-5.10-sky --depth=1 && repo sync && cd common && curl -LSs "https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh" | bash - && cd ../ && ./build.sh -t -c && mv AtomX-gki-sky-*.zip atomx_sky_kernel_cicd_gki-ksu.zip
+        run: repo init -u https://gitlab.com/xprateek/kernel_manifest_clo -b main --depth=1 && repo sync && cd common && curl -LSs "https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh" | bash - && cd ../ && ./build.sh -t -c && mv AtomX-gki-sky-*.zip atomx_sky_kernel_cicd_gki-ksu.zip
       - name: "📄 Generating Release Tag"
         id: tag
         run: echo "release_tag=xprateek/ATOMX_SKY_KERNEL_CICD_GKI_WIP_KSU-$(date +"%Y.%m.%d")" >> $GITHUB_OUTPUT
