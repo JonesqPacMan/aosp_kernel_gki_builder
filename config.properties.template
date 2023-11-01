@@ -1,6 +1,6 @@
 KERNEL_SOURCE=https://git.codelinaro.org/clo/la/kernel/common.git
 KERNEL_SOURCE_BRANCH=aosp-new/android13-5.10-lts
-KERNEL_CONFIG=gki_defconfig
+KERNEL_CONFIG=defconfig
 KERNEL_IMAGE_NAME=Image
 ARCH=arm64
 
@@ -10,7 +10,7 @@ AOSP_CLANG_SYSTEM=linux-x86
 AOSP_CLANG_BRANCH=main
 AOSP_CLANG_VERSION=stable
 USE_CUSTOM_CLANG=true
-CUSTOM_CLANG_SOURCE=https://github.com/ZyCromerZ/Clang/releases/download/18.0.0-20231030-release/Clang-18.0.0-20231030.tar.gz
+CUSTOM_CLANG_SOURCE=
 CUSTOM_CLANG_BRANCH=
 
 ENABLE_GCC=false
@@ -46,5 +46,5 @@ ENABLE_CCACHE=true
 NEED_DTBO=false
 BUILDER_HOST=xprateek_gh_actions
 
-TC_CUSTOM_CMDS:CROSS_COMPILE=aarch64-linux-gnu-
+TC_CUSTOM_CMDS:CLANG_TRIPLE=aarch64-linux-gnu- CROSS_COMPILE=aarch64-linux-gnu-
 EXTRA_CMDS:AR=llvm-ar OBJDUMP=llvm-objdump STRIP=llvm-strip NM=llvm-nm OBJCOPY=llvm-objcopy
