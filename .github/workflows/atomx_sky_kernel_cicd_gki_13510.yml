@@ -1,4 +1,4 @@
-name: 🏗️ BUILD ATOMX_SKY_KERNEL_CICD_GKI_WIP
+name: 🏗️ BUILD CLO_GKI_ANDROID13-5.10-LTS
 on:
   push:
   pull_request:
@@ -14,7 +14,7 @@ jobs:
   build:
     permissions:
       contents: write
-    name: BUILD ATOMX_SKY_KERNEL_CICD_GKI_WIP
+    name: BUILD CLO_GKI_ANDROID13-5.10-LTS
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
     env:
@@ -27,7 +27,7 @@ jobs:
 
     - name: Read the configuration
       run: |
-        CONFIG_ENV=config.properties.sky
+        CONFIG_ENV=config.properties.gki_13510
         echo "KERNEL_SOURCE=$(cat $CONFIG_ENV | grep -w "KERNEL_SOURCE" | head -n 1 | cut -d "=" -f 2)" >> $GITHUB_ENV
         echo "KERNEL_SOURCE_BRANCH=$(cat $CONFIG_ENV | grep -w "KERNEL_SOURCE_BRANCH" | head -n 1 | cut -d "=" -f 2)" >> $GITHUB_ENV
         echo "KERNEL_CONFIG=$(cat $CONFIG_ENV | grep -w "KERNEL_CONFIG" | head -n 1 | cut -d "=" -f 2)" >> $GITHUB_ENV
