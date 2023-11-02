@@ -32,7 +32,7 @@ CUSTOM_GCC_32_BIN=arm-linux-androideabi-
 
 ENABLE_KERNELSU=true
 KERNELSU_INSTALLER=https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh
-KERNELSU_TAG=
+KERNELSU_TAG=main
 KSU_EXPECTED_SIZE=
 KSU_EXPECTED_HASH=
 BUILD_KERNELSU_BOOT_IMG=false
