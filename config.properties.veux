@@ -43,7 +43,7 @@ DISABLE_CC_WERROR=false
 ADD_KPROBES_CONFIG=false
 ADD_OVERLAYFS_CONFIG=false
 ENABLE_CCACHE=true
-NEED_DTBO=true
+NEED_DTBO=false
 BUILDER_HOST=xprateek_gh_actions
 
 TC_CUSTOM_CMDS:CLANG_TRIPLE=aarch64-linux-gnu- CROSS_COMPILE=aarch64-linux-gnu-
