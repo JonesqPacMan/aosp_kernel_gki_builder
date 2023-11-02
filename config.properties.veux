@@ -5,11 +5,11 @@ KERNEL_IMAGE_NAME=Image
 ARCH=arm64
 
 ENABLE_CLANG=true
-USE_AOSP_CLANG=true
+USE_AOSP_CLANG=false
 AOSP_CLANG_SYSTEM=linux-x86
 AOSP_CLANG_BRANCH=main
 AOSP_CLANG_VERSION=stable
-USE_CUSTOM_CLANG=false
+USE_CUSTOM_CLANG=true
 CUSTOM_CLANG_SOURCE=https://github.com/ZyCromerZ/Clang/releases/download/17.0.0-20230725-release/Clang-17.0.0-20230725.tar.gz
 CUSTOM_CLANG_BRANCH=
 
@@ -47,4 +47,4 @@ NEED_DTBO=true
 BUILDER_HOST=xprateek_gh_actions
 
 TC_CUSTOM_CMDS:CLANG_TRIPLE=aarch64-linux-gnu- CROSS_COMPILE=aarch64-linux-gnu-
-EXTRA_CMDS:AR=
+EXTRA_CMDS:AR=AR=llvm-ar OBJDUMP=llvm-objdump STRIP=llvm-strip NM=llvm-nm OBJCOPY=llvm-objcopy
