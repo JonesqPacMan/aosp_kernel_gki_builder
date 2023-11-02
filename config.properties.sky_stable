@@ -1,6 +1,6 @@
 KERNEL_SOURCE=https://gitlab.com/xprateek/android_kernel_xiaomi_sky.git
-KERNEL_SOURCE_BRANCH=sky_defconfig
-KERNEL_CONFIG=gki_defconfig
+KERNEL_SOURCE_BRANCH=sky_wip
+KERNEL_CONFIG=sky_defconfig
 KERNEL_IMAGE_NAME=Image
 ARCH=arm64
 
