@@ -1,4 +1,4 @@
-name: 🏗️ BUILD ATOMX_CICD_GKI_STABLE
+name: 🏗️ BUILD SKY_KERNEL
 on:
   push:
   pull_request:
@@ -14,7 +14,7 @@ jobs:
   build:
     permissions:
       contents: write
-    name: BUILD ATOMX_CICD_GKI_STABLE
+    name: BUILD SKY_KERNEL
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
     env:
@@ -27,7 +27,7 @@ jobs:
 
     - name: Read the configuration
       run: |
-        CONFIG_ENV=config.properties.sky_stable
+        CONFIG_ENV=config.properties.sky
         echo "KERNEL_SOURCE=$(cat $CONFIG_ENV | grep -w "KERNEL_SOURCE" | head -n 1 | cut -d "=" -f 2)" >> $GITHUB_ENV
         echo "KERNEL_SOURCE_BRANCH=$(cat $CONFIG_ENV | grep -w "KERNEL_SOURCE_BRANCH" | head -n 1 | cut -d "=" -f 2)" >> $GITHUB_ENV
         echo "KERNEL_CONFIG=$(cat $CONFIG_ENV | grep -w "KERNEL_CONFIG" | head -n 1 | cut -d "=" -f 2)" >> $GITHUB_ENV

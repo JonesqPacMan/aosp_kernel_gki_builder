@@ -1,4 +1,4 @@
-name: 🏗️ BUILD ATOMX_SKY_KERNEL_CICD_GKI_STABLE
+name: 🏗️ BUILD SOURCE_KERNEL_CICD_GKI_STABLE
 on:
   push:
     branches: 
