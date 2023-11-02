@@ -1,7 +1,5 @@
 name: 🏗️ BUILD CLO_GKI_ANDROID13-5.10-LTS
 on:
-  push:
-  pull_request:
   workflow_dispatch:
     inputs:
       release:

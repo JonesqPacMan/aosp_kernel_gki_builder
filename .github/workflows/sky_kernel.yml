@@ -1,7 +1,5 @@
 name: 🏗️ BUILD SKY_KERNEL
 on:
-  push:
-  pull_request:
   workflow_dispatch:
     inputs:
       release:
