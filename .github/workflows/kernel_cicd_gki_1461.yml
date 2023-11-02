@@ -1,5 +1,7 @@
 name: 🏗️ BUILD CLO_GKI_ANDROID14-6.1-LTS
 on:
+  schedule:
+    - cron: "0 0 * * SUN"
   workflow_dispatch:
     inputs:
       release:
