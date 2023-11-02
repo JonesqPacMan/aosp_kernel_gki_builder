@@ -13,6 +13,19 @@ Branch : aosp-new/android13-5.10-lts
 atomx_sky_kernel_cicd_gki-stock.zip
 atomx_sky_kernel_cicd_gki-ksu.zip
 ```
+
+### CLO_GKI Build Status
+
+* * *
+
+|     |     |
+| --- | --- |
+| Android Kernel 5.4-LTS (CLO) |  [![🏗️ BUILD CLO_GKI_ANDROID11-5.4-LTS](https://github.com/xprateek/ATOMX_SKY_KERNEL_CICD_GKI/actions/workflows/kernel_cicd_gki_1154.yml/badge.svg)](https://github.com/xprateek/ATOMX_SKY_KERNEL_CICD_GKI/actions/workflows/kernel_cicd_gki_1154.yml)  [![🏗️ BUILD CLO_GKI_ANDROID12-5.4-LTS](https://github.com/xprateek/ATOMX_SKY_KERNEL_CICD_GKI/actions/workflows/kernel_cicd_gki_1254.yml/badge.svg)](https://github.com/xprateek/ATOMX_SKY_KERNEL_CICD_GKI/actions/workflows/kernel_cicd_gki_1254.yml)   |
+| Android Kernel 5.10-LTS (CLO) |   [![🏗️ BUILD CLO_GKI_ANDROID13-5.10-LTS](https://github.com/xprateek/ATOMX_SKY_KERNEL_CICD_GKI/actions/workflows/kernel_cicd_gki_13510.yml/badge.svg)](https://github.com/xprateek/ATOMX_SKY_KERNEL_CICD_GKI/actions/workflows/kernel_cicd_gki_13510.yml) [![🏗️ BUILD CLO_GKI_ANDROID12-5.10-LTS](https://github.com/xprateek/ATOMX_SKY_KERNEL_CICD_GKI/actions/workflows/kernel_cicd_gki_12510.yml/badge.svg)](https://github.com/xprateek/ATOMX_SKY_KERNEL_CICD_GKI/actions/workflows/kernel_cicd_gki_12510.yml)  |
+| Android Kernel 5.15-LTS (CLO) |  [![🏗️ BUILD CLO_GKI_ANDROID13-5.15-LTS](https://github.com/xprateek/ATOMX_SKY_KERNEL_CICD_GKI/actions/workflows/kernel_cicd_gki_13515.yml/badge.svg)](https://github.com/xprateek/ATOMX_SKY_KERNEL_CICD_GKI/actions/workflows/kernel_cicd_gki_13515.yml) [![🏗️ BUILD CLO_GKI_ANDROID14-5.15-LTS](https://github.com/xprateek/ATOMX_SKY_KERNEL_CICD_GKI/actions/workflows/kernel_cicd_gki_14515.yml/badge.svg)](https://github.com/xprateek/ATOMX_SKY_KERNEL_CICD_GKI/actions/workflows/kernel_cicd_gki_14515.yml)   |
+| Android Kernel 6.1-LTS (CLO) |  [![🏗️ BUILD CLO_GKI_ANDROID14-6.1-LTS](https://github.com/xprateek/ATOMX_SKY_KERNEL_CICD_GKI/actions/workflows/kernel_cicd_gki_1461.yml/badge.svg)](https://github.com/xprateek/ATOMX_SKY_KERNEL_CICD_GKI/actions/workflows/kernel_cicd_gki_1461.yml)   |
+|     |     |
+
 ### 📦 Download Here 🔗 : [Releases](https://github.com/xprateek/ATOMX_SKY_KERNEL_CICD_GKI/releases)
 
 > * * *
