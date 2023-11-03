@@ -1,6 +1,6 @@
 KERNEL_SOURCE=https://git.codelinaro.org/clo/la/kernel/common.git
 KERNEL_SOURCE_BRANCH=aosp-new/android12-5.4-lts
-KERNEL_CONFIG=gki_defconfig
+KERNEL_CONFIG=defconfig
 KERNEL_IMAGE_NAME=Image
 ARCH=arm64
 
@@ -46,5 +46,5 @@ ENABLE_CCACHE=true
 NEED_DTBO=false
 BUILDER_HOST=xprateek_gh_actions
 
-TC_CUSTOM_CMDS:CLANG_TRIPLE=aarch64-linux-gnu- CROSS_COMPILE=aarch64-linux-gnu- CLANG_FLAG=-fPIC
+TC_CUSTOM_CMDS:CLANG_TRIPLE=aarch64-linux-gnu- CROSS_COMPILE=aarch64-linux-gnu-
 EXTRA_CMDS:
