@@ -46,5 +46,5 @@ ENABLE_CCACHE=true
 NEED_DTBO=false
 BUILDER_HOST=xprateek_gh_actions
 
-TC_CUSTOM_CMDS:CLANG_TRIPLE=aarch64-linux-gnu- CROSS_COMPILE=aarch64-linux-gnu-
+TC_CUSTOM_CMDS:CLANG_TRIPLE=aarch64-linux-gnu- CROSS_COMPILE=aarch64-linux-gnu- CLANG_FLAG=-fPIC
 EXTRA_CMDS:
