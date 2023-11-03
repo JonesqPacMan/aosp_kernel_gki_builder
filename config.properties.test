@@ -1,6 +1,6 @@
-KERNEL_SOURCE=https://github.com/MiCode/Xiaomi_Kernel_OpenSource.git
-KERNEL_SOURCE_BRANCH=xun-t-oss
-KERNEL_CONFIG=vendor/xun_GKI.config
+KERNEL_SOURCE=
+KERNEL_SOURCE_BRANCH=
+KERNEL_CONFIG=
 KERNEL_IMAGE_NAME=Image
 ARCH=arm64
 
