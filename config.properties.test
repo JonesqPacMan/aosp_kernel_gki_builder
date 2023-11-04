@@ -1,6 +1,6 @@
-KERNEL_SOURCE=https://github.com/Pzqqt/android_kernel_xiaomi_marble.git
-KERNEL_SOURCE_BRANCH=melt-rebase
-KERNEL_CONFIG=marble_defconfig
+KERNEL_SOURCE=https://github.com/aosp-mirror/kernel_common.git
+KERNEL_SOURCE_BRANCH=android12-5.10-lts
+KERNEL_CONFIG=gki_defconfig
 KERNEL_IMAGE_NAME=Image
 ARCH=arm64
 
