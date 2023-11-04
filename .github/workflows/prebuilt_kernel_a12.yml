@@ -10,7 +10,7 @@ jobs:
       - name: "👨‍🔧 Setup build environment"
         run: curl https://raw.githubusercontent.com/akhilnarang/scripts/master/setup/android_build_env.sh | bash -
       - name: "⏳ Clone Repo, Sync & Build."
-        run: repo init -u https://gitlab.com/xprateek/kernel_manifest -b main --depth=1 && repo sync && LTO=thin BUILD_CONFIG=common/build.config.gki.aarch64 build/build.sh
+        run: repo init -u https://gitlab.com/xprateek/kernel_manifest -b common-android12-5.10-lts --depth=1 && repo sync && LTO=thin BUILD_CONFIG=common/build.config.gki.aarch64 build/build.sh
       - name: "📄 Generating Release Tag"
         id: tag
         run: echo "release_tag=xprateek/SOURCE_KERNEL_CICD_GKI_STOCK-$(date +"%Y.%m.%d")" >> $GITHUB_OUTPUT
@@ -30,7 +30,7 @@ jobs:
       - name: "👨‍🔧 Setup build environment"
         run: curl https://raw.githubusercontent.com/akhilnarang/scripts/master/setup/android_build_env.sh | bash -
       - name: "⏳ Clone Repo, Sync & Build."
-        run: repo init -u https://gitlab.com/xprateek/kernel_manifest -b main --depth=1 && repo sync && cd common && curl -LSs "https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh" | bash - && cd ../ && LTO=thin BUILD_CONFIG=common/build.config.gki.aarch64 build/build.sh 
+        run: repo init -u https://gitlab.com/xprateek/kernel_manifest -b common-android12-5.10-lts --depth=1 && repo sync && cd common && curl -LSs "https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh" | bash - && cd ../ && LTO=thin BUILD_CONFIG=common/build.config.gki.aarch64 build/build.sh 
       - name: "📄 Generating Release Tag"
         id: tag
         run: echo "release_tag=xprateek/SOURCE_KERNEL_CICD_GKI_KSU-$(date +"%Y.%m.%d")" >> $GITHUB_OUTPUT
