@@ -1,4 +1,4 @@
-name: 🏗️ BUILD SOURCE_KERNEL_CICD_GKI
+name: 🏗️ BUILD PREBUILT_KERNEL_A12_GKI
 on:
   workflow_dispatch:
 
