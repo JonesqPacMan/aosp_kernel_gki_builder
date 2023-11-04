@@ -1,6 +1,6 @@
-KERNEL_SOURCE=https://github.com/MiCode/Xiaomi_Kernel_OpenSource.git
-KERNEL_SOURCE_BRANCH=garnet-t-oss
-KERNEL_CONFIG=gki_defconfig
+KERNEL_SOURCE=https://github.com/Pzqqt/android_kernel_xiaomi_marble.git
+KERNEL_SOURCE_BRANCH=melt-rebase
+KERNEL_CONFIG=marble_defconfig
 KERNEL_IMAGE_NAME=Image
 ARCH=arm64
 
