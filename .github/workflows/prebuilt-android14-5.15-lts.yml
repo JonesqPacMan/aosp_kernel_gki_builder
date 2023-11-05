@@ -20,10 +20,10 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           tag_name: ${{ steps.tag.outputs.release_tag }}
-          files: /home/runner/work/ATOMX_SKY_KERNEL_CICD_GKI/ATOMX_SKY_KERNEL_CICD_GKI/out/android12-5.10/dist/Image
+          files: /home/runner/work/aosp_kernel_gki_builder/aosp_kernel_gki_builder/out/android12-5.10/dist/Image
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          repository: xprateek/ATOMX_SKY_KERNEL_CICD_GKI
+          repository: xprateek/aosp_kernel_gki_builder
           TOKEN: ${{ secrets.TOKEN }}
 
   build_atomx_sky_ksu:
@@ -40,8 +40,8 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           tag_name: ${{ steps.tag.outputs.release_tag }}
-          files: /home/runner/work/ATOMX_SKY_KERNEL_CICD_GKI/ATOMX_SKY_KERNEL_CICD_GKI/out/android12-5.10/dist/Image
+          files: /home/runner/work/aosp_kernel_gki_builder/aosp_kernel_gki_builder/out/android12-5.10/dist/Image
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          repository: xprateek/ATOMX_SKY_KERNEL_CICD_GKI
+          repository: xprateek/aosp_kernel_gki_builder
           TOKEN: ${{ secrets.TOKEN }}
