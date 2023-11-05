@@ -1,4 +1,4 @@
-name: 🏗️ BUILD PREBUILT_MAINLINE
+name: 🏗️ PREBUILT_MAINLINE
 on:
   workflow_dispatch:
 

@@ -1,4 +1,4 @@
-name: 🏗️ BUILD PREBUILT_A12-5.4-LTS
+name: 🏗️ PREBUILT_A12-5.4-LTS
 on:
   workflow_dispatch:
 

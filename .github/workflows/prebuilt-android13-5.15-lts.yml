@@ -1,4 +1,4 @@
-name: 🏗️ BUILD PREBUILT_A13-5.15-LTS
+name: 🏗️ PREBUILT_A13-5.15-LTS
 on:
   workflow_dispatch:
 
