@@ -1,5 +1,5 @@
-KERNEL_SOURCE=
-KERNEL_SOURCE_BRANCH=
+KERNEL_SOURCE=https://git.codelinaro.org/clo/la/kernel/common.git
+KERNEL_SOURCE_BRANCH=aosp-new/android-mainline
 KERNEL_CONFIG=gki_defconfig
 KERNEL_IMAGE_NAME=Image
 ARCH=arm64
