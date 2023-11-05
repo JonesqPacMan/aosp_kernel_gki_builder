@@ -1,9 +1,9 @@
-# GKI Build Status
+# AOSP GKI Kernel Build Status (ARM64 Only)
 
 |     |     |     |
 | --- | --- | --- |
-| **Kernel Branch** (ARM64 Only) | **PREBUILTS** | **CI-CD** |
-| android-mainline | [![🏗️ PREBUILT_MAINLINE](https://github.com/xprateek/aosp_kernel_gki_builder/actions/workflows/prebuilt-android-mainline.yml/badge.svg)](https://github.com/xprateek/aosp_kernel_gki_builder/actions/workflows/prebuilt-android-mainline.yml) | [![🏗️ BUILD MAINLINE-KERNEL](https://github.com/xprateek/aosp_kernel_gki_builder/actions/workflows/build-android-mainline.yml/badge.svg)](https://github.com/xprateek/aosp_kernel_gki_builder/actions/workflows/build-android-mainline.yml) |
+| **Kernel Branch** | **PREBUILTS** | **CI-CD** |
+| android-mainline | - | [![🏗️ BUILD MAINLINE-KERNEL](https://github.com/xprateek/aosp_kernel_gki_builder/actions/workflows/build-android-mainline.yml/badge.svg)](https://github.com/xprateek/aosp_kernel_gki_builder/actions/workflows/build-android-mainline.yml) |
 | android11-5.4-lts | [![🏗️ PREBUILT_A11-5.4-LTS](https://github.com/xprateek/aosp_kernel_gki_builder/actions/workflows/prebuilt-android11-5.4-lts.yml/badge.svg)](https://github.com/xprateek/aosp_kernel_gki_builder/actions/workflows/prebuilt-android11-5.4-lts.yml) | [![🏗️ BUILD ANDROID11-5.4-LTS](https://github.com/xprateek/aosp_kernel_gki_builder/actions/workflows/build-android11-5.4-lts.yml/badge.svg)](https://github.com/xprateek/aosp_kernel_gki_builder/actions/workflows/build-android11-5.4-lts.yml) |
 | android12-5.4-lts | [![🏗️ PREBUILT_A12-5.4-LTS](https://github.com/xprateek/aosp_kernel_gki_builder/actions/workflows/prebuilt-android12-5.4-lts.yml/badge.svg)](https://github.com/xprateek/aosp_kernel_gki_builder/actions/workflows/prebuilt-android12-5.4-lts.yml) | [![🏗️ BUILD ANDROID12-5.4-LTS](https://github.com/xprateek/aosp_kernel_gki_builder/actions/workflows/build-android12-5.4-lts.yml/badge.svg)](https://github.com/xprateek/aosp_kernel_gki_builder/actions/workflows/build-android12-5.4-lts.yml) |
 | android12-5.10-lts | [![🏗️ PREBUILT_A12-5.10-LTS](https://github.com/xprateek/aosp_kernel_gki_builder/actions/workflows/prebuilt-android12-5.10-lts.yml/badge.svg)](https://github.com/xprateek/aosp_kernel_gki_builder/actions/workflows/prebuilt-android12-5.10-lts.yml) | [![🏗️ BUILD ANDROID12-5.10-LTS](https://github.com/xprateek/aosp_kernel_gki_builder/actions/workflows/build-android12-5.10-lts.yml/badge.svg)](https://github.com/xprateek/aosp_kernel_gki_builder/actions/workflows/build-android12-5.10-lts.yml) |
