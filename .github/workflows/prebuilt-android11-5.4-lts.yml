@@ -6,7 +6,7 @@ on:
 
 jobs:
 
-  build_atomx_sky_stock:
+  PREBUILT_A11_5_4_LTS:
     runs-on: ubuntu-latest
     steps:
       - name: "👨‍🔧 Setup build environment"
@@ -15,7 +15,7 @@ jobs:
         run: repo init -u https://gitlab.com/xprateek/kernel_manifest -b common-android11-5.4-lts --depth=1 && repo sync && LTO=thin BUILD_CONFIG=common/build.config.gki.aarch64 build/build.sh
       - name: "📄 Generating Release Tag"
         id: tag
-        run: echo "release_tag=xprateek/SOURCE_KERNEL_CICD_GKI_STOCK-$(date +"%Y.%m.%d")" >> $GITHUB_OUTPUT
+        run: echo "release_tag=xprateek/PREBUILT_A11-5.4-LTS-$(date +"%Y.%m.%d")" >> $GITHUB_OUTPUT
       - name: "🗃️ Create Release"
         uses: softprops/action-gh-release@v1
         with:
@@ -26,7 +26,7 @@ jobs:
           repository: xprateek/aosp_kernel_gki_builder
           TOKEN: ${{ secrets.TOKEN }}
 
-  build_atomx_sky_ksu:
+  PREBUILT_A11_5_4_LTS_KSU:
     runs-on: ubuntu-latest
     steps:
       - name: "👨‍🔧 Setup build environment"
@@ -35,7 +35,7 @@ jobs:
         run: repo init -u https://gitlab.com/xprateek/kernel_manifest -b common-android11-5.4-lts --depth=1 && repo sync && cd common && curl -LSs "https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh" | bash - && cd ../ && LTO=thin BUILD_CONFIG=common/build.config.gki.aarch64 build/build.sh 
       - name: "📄 Generating Release Tag"
         id: tag
-        run: echo "release_tag=xprateek/SOURCE_KERNEL_CICD_GKI_KSU-$(date +"%Y.%m.%d")" >> $GITHUB_OUTPUT
+        run: echo "release_tag=xprateek/PREBUILT_A11-5.4-LTS_KSU-$(date +"%Y.%m.%d")" >> $GITHUB_OUTPUT
       - name: "🗃️ Create Release"
         uses: softprops/action-gh-release@v1
         with:

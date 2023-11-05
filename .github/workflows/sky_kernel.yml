@@ -388,5 +388,5 @@ jobs:
           kernel_workspace/bootimg_tmp/boot-kernelsu.img
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        repository: xprateek/ATOMX_SKY_KERNEL_CICD_GKI_KSU
+        repository: xprateek/aosp_kernel_gki_builder
         TOKEN: ${{ secrets.TOKEN }}
