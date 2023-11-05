@@ -1,4 +1,4 @@
-name: 🏗️ BUILD CLO_GKI_ANDROID14-6.1-LTS
+name: 🏗️ BUILD ANDROID12-5.4-LTS
 on:
   schedule:
     - cron: "0 0 * * SUN"
@@ -14,7 +14,7 @@ jobs:
   build:
     permissions:
       contents: write
-    name: BUILD CLO_GKI_ANDROID14-6.1-LTS
+    name: BUILD ANDROID12-5.4-LTS
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
     env:
@@ -27,7 +27,7 @@ jobs:
 
     - name: Read the configuration
       run: |
-        CONFIG_ENV=config.properties.gki_1461
+        CONFIG_ENV=config.properties.gki_1254
         echo "KERNEL_SOURCE=$(cat $CONFIG_ENV | grep -w "KERNEL_SOURCE" | head -n 1 | cut -d "=" -f 2)" >> $GITHUB_ENV
         echo "KERNEL_SOURCE_BRANCH=$(cat $CONFIG_ENV | grep -w "KERNEL_SOURCE_BRANCH" | head -n 1 | cut -d "=" -f 2)" >> $GITHUB_ENV
         echo "KERNEL_CONFIG=$(cat $CONFIG_ENV | grep -w "KERNEL_CONFIG" | head -n 1 | cut -d "=" -f 2)" >> $GITHUB_ENV
@@ -71,7 +71,7 @@ jobs:
         echo "BUILDER_HOST=$(cat $CONFIG_ENV | grep -w "BUILDER_HOST" | head -n 1 | cut -d "=" -f 2)" >> $GITHUB_ENV
         echo "TC_CUSTOM_CMDS=$(cat $CONFIG_ENV | grep -w "TC_CUSTOM_CMDS" | head -n 1 | cut -d ":" -f 2)" >> $GITHUB_ENV
         echo "EXTRA_CMDS=$(cat $CONFIG_ENV | grep -w "EXTRA_CMDS" | head -n 1 | cut -d ":" -f 2)" >> $GITHUB_ENV
-
+ 
     - name: Setting up the kernel compilation environment
       run: |
         echo "BUILD_TIME=$(TZ=Asia/Shanghai date "+%Y%m%d-%H%M")-UTC+8" >> $GITHUB_ENV
@@ -270,7 +270,7 @@ jobs:
           if [ ${{ env.ENABLE_CCACHE }} = true ]; then
             make -j$(nproc --all) CC="ccache gcc" O=out ARCH=${{ env.ARCH }} ${{ env.TC_CUSTOM_CMDS }} ${{ env.EXTRA_CMDS }} ${{ env.GCC_64 }} ${{ env.GCC_32 }}
           else
-            make -j$(nproc --all) CC=gcc O=out ARCH=${{ env.ARCH }} ${{ env.TC_CUSTOM_CMDS }} ${{ env.EXTRA_CMDS }} ${{ env.GCC_64 }} ${{ env.GCC_32 }} 
+            make -j$(nproc --all) CC=gcc O=out ARCH=${{ env.ARCH }} ${{ env.TC_CUSTOM_CMDS }} ${{ env.EXTRA_CMDS }} ${{ env.GCC_64 }} ${{ env.GCC_32 }}
           fi
         fi
 

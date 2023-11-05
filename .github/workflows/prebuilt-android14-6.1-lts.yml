@@ -1,0 +1,45 @@
+name: 🏗️ BUILD PREBUILT_A14-6.1-LTS
+on:
+  workflow_dispatch:
+
+jobs:
+
+  build_atomx_sky_stock:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "👨‍🔧 Setup build environment"
+        run: curl https://raw.githubusercontent.com/akhilnarang/scripts/master/setup/android_build_env.sh | bash -
+      - name: "⏳ Clone Repo, Sync & Build."
+        run: repo init -u https://gitlab.com/xprateek/kernel_manifest -b common-android14-6.1-lts --depth=1 && repo sync && tools/bazel build --config=fast //common:kernel_aarch64_dist
+      - name: "📄 Generating Release Tag"
+        id: tag
+        run: echo "release_tag=xprateek/SOURCE_KERNEL_CICD_GKI_STOCK-$(date +"%Y.%m.%d")" >> $GITHUB_OUTPUT
+      - name: "🗃️ Create Release"
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ steps.tag.outputs.release_tag }}
+          files: /home/runner/work/ATOMX_SKY_KERNEL_CICD_GKI/ATOMX_SKY_KERNEL_CICD_GKI/out/android12-5.10/dist/Image
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          repository: xprateek/ATOMX_SKY_KERNEL_CICD_GKI
+          TOKEN: ${{ secrets.TOKEN }}
+
+  build_atomx_sky_ksu:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "👨‍🔧 Setup build environment"
+        run: curl https://raw.githubusercontent.com/akhilnarang/scripts/master/setup/android_build_env.sh | bash -
+      - name: "⏳ Clone Repo, Sync & Build."
+        run: repo init -u https://gitlab.com/xprateek/kernel_manifest -b common-android14-6.1-lts --depth=1 && repo sync && cd common && curl -LSs "https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh" | bash - && cd ../ && tools/bazel build --config=fast //common:kernel_aarch64_dist
+      - name: "📄 Generating Release Tag"
+        id: tag
+        run: echo "release_tag=xprateek/SOURCE_KERNEL_CICD_GKI_KSU-$(date +"%Y.%m.%d")" >> $GITHUB_OUTPUT
+      - name: "🗃️ Create Release"
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ steps.tag.outputs.release_tag }}
+          files: /home/runner/work/ATOMX_SKY_KERNEL_CICD_GKI/ATOMX_SKY_KERNEL_CICD_GKI/out/android12-5.10/dist/Image
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          repository: xprateek/ATOMX_SKY_KERNEL_CICD_GKI
+          TOKEN: ${{ secrets.TOKEN }}
