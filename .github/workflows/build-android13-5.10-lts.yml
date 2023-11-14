@@ -99,7 +99,7 @@ jobs:
       run: |
         cd $GITHUB_WORKSPACE/kernel_workspace
         if [[ ${{ env.CUSTOM_CLANG_SOURCE }} =~ git ]]; then
-            if [[ ${{ env.CUSTOM_CLANG_SOURCE }} == *'.tar.gz' ]]; then
+            if [[ ${{ env.CUSTOM_CLANG_SOURCE }} == *'.tar.zst' ]]; then
                 wget -O clang.tar.zst ${{ env.CUSTOM_CLANG_SOURCE }}
                 mkdir clang
                 tar -C clang/ --use-compress-program=unzstd -xvf clang.tar.zst
