@@ -5,11 +5,11 @@ KERNEL_IMAGE_NAME=Image
 ARCH=arm64
 
 ENABLE_CLANG=true
-USE_AOSP_CLANG=false
+USE_AOSP_CLANG=true
 AOSP_CLANG_SYSTEM=linux-x86
 AOSP_CLANG_BRANCH=main
 AOSP_CLANG_VERSION=stable
-USE_CUSTOM_CLANG=true
+USE_CUSTOM_CLANG=false
 CUSTOM_CLANG_SOURCE=https://github.com/llvm/llvm-project/releases/download/llvmorg-17.0.5/clang+llvm-17.0.5-x86_64-linux-gnu-ubuntu-22.04.tar.xz
 CUSTOM_CLANG_BRANCH=
 
