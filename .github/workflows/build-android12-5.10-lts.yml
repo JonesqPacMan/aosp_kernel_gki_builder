@@ -1,7 +1,5 @@
 name: 🏗️ BUILD ANDROID12-5.10-LTS
 on:
-  schedule:
-    - cron: "59 23 * * SAT"
   workflow_dispatch:
     inputs:
       release:
