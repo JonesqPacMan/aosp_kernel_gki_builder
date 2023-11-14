@@ -90,9 +90,9 @@ jobs:
       run: |
         cd $GITHUB_WORKSPACE/kernel_workspace
         mkdir clang
-        wget https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/tags/ndk-r23-beta2/clang-r412851.tar.gz
-        tar -C clang/ -zxvf clang-r412851.tar.gz
-        rm -rf clang-r412851.tar.gz
+        wget https://android.googlesource.com/platform/prebuilts/clang/host/${{ env.AOSP_CLANG_SYSTEM }}/+archive/refs/heads/${{ env.AOSP_CLANG_BRANCH }}/clang-${{ env.AOSP_CLANG_VERSION }}.tar.gz
+        tar -C clang/ -zxvf clang-${{ env.AOSP_CLANG_VERSION }}.tar.gz
+        rm -rf clang-${{ env.AOSP_CLANG_VERSION }}.tar.gz
 
     - name: Download Custom Clang
       if: env.ENABLE_CLANG == 'true' && env.USE_AOSP_CLANG == 'false' && env.USE_CUSTOM_CLANG == 'true'
