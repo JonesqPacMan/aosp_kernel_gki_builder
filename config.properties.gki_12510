@@ -47,4 +47,4 @@ NEED_DTBO=false
 BUILDER_HOST=jonesqpacman_gh_actions
 
 TC_CUSTOM_CMDS:CLANG_TRIPLE=aarch64-linux-gnu- CROSS_COMPILE=aarch64-linux-gnu-
-EXTRA_CMDS:CC=clang
+EXTRA_CMDS:
