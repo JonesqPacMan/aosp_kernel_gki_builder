@@ -90,7 +90,7 @@ jobs:
       run: |
         cd $GITHUB_WORKSPACE/kernel_workspace
         mkdir clang
-        wget https://android.googlesource.com/platform//prebuilts/clang/host/linux-x86/+archive/3857008389202edac32d57008bb8c99d2c957f9d/clang-r416183b.tar.gz
+        wget https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/06a71ddac05c22edb2d10b590e1769b3f8619bef/clang-r416183b.tar.gz
         tar -C clang/ -zxvf clang-r416183b.tar.gz
         rm -rf clang-r416183b.tar.gz
 
