@@ -1,4 +1,4 @@
-KERNEL_SOURCE=https://github.com/MiCode/Xiaomi_Kernel_OpenSource
+KERNEL_SOURCE=https://github.com/JonesqPacMan/Xiaomi_Kernel_OpenSource
 KERNEL_SOURCE_BRANCH=bsp-aristotle-s-oss
 KERNEL_CONFIG=gki_defconfig
 KERNEL_IMAGE_NAME=Image
