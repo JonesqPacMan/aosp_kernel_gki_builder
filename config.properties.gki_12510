@@ -1,4 +1,4 @@
-KERNEL_SOURCE=https://github.com/JonesqPacMan/Xiaomi_Kernel_OpenSource
+KERNEL_SOURCE=https://github.com/MiCode/Xiaomi_Kernel_OpenSource
 KERNEL_SOURCE_BRANCH=bsp-aristotle-s-oss
 KERNEL_CONFIG=gki_defconfig
 KERNEL_IMAGE_NAME=Image
@@ -38,7 +38,7 @@ KSU_EXPECTED_HASH=
 BUILD_KERNELSU_BOOT_IMG=false
 KERNELSU_SOURCE_BOOT_IMAGE=
 
-DISABLE-LTO=false
+DISABLE-LTO=true
 DISABLE_CC_WERROR=false
 ADD_KPROBES_CONFIG=false
 ADD_OVERLAYFS_CONFIG=false
@@ -47,4 +47,5 @@ NEED_DTBO=false
 BUILDER_HOST=jonesqpacman_gh_actions
 
 TC_CUSTOM_CMDS:CLANG_TRIPLE=aarch64-linux-gnu- CROSS_COMPILE=aarch64-linux-android-
-EXTRA_CMDS:CLANG_TRIPLE=aarch64-linux-gnu- CROSS_COMPILE=aarch64-linux-android- CC=clang LD=ld.lld AR=llvm-ar NM=llvm-nm OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump READELF=llvm-readelf STRIP=llvm-strip
+EXTRA_CMDS:CROSS_COMPILE=aarch64-linux-android- CC=clang PLATFORM_VERSION=12 ANDROID_MAJOR_VERSION=s ARCH=arm64 LLVM_IAS=1 LLVM=1 LOCALVERSION=-Android12-9-v$(date +%Y%m%d)-KSU CONFIG_LTO_NONE=y CONFIG_LOCALVERSION_AUTO=n"
+
